@@ -1,0 +1,78 @@
+dataset_args:
+    train:
+        mode: 'train'
+        shape: &shape [112,112]
+        dataset_type: 'BalancedFaceDataset'
+        zip_path: ##### The location of your TrainData.zip ######
+        augmentation:
+            ToTensor: NULL
+            #ColorJitter: [0.5, 0.5, 0.5, 0]
+            #RandomCrop: [[112, 96]]
+            RandomHorizontalFlip: NULL
+        loader_args:
+            batch_size: 128
+            num_workers: &num_workers 24
+            shuffle: True
+            drop_last: True
+            pin_memory: True
+    val:
+        shape: *shape
+        dataset_type: 'RFWDataset_bin'
+        dataset_path: #### The folder path of the four bin files (ex. ./RFW_bin/) #######
+        augmentation:
+            ToTensor: NULL
+            #CenterCrop: [[112, 96]]
+        loader_args:
+            batch_size: 64
+            num_workers: *num_workers
+            shuffle: False
+            drop_last: False
+            pin_memory: True
+    val-instance:
+        shape: *shape
+        dataset_type: 'RFWDatasetAll'
+        dataset_path: ##### The location of your ValInstData.zip ########
+        augmentation:
+            ToTensor: NULL
+        loader_args:
+            batch_size: 64
+            num_workers: *num_workers
+            shuffle: False
+            drop_last: False
+            pin_memory: True
+learning_args:
+    optimizer_args:
+        type: 'SGD'
+        args:
+            lr: 0.1
+            momentum: 0.9
+            weight_decay: 0.0005
+    scheduler_args:
+        type: 'MultiStepLR'
+        args:
+            milestones: [8, 18, 30, 34]
+            verbose: True
+            gamma: 0.1
+network_args:
+    save_path: './save'
+    encoder_args: NULL
+    head_args:
+        in_features: 512
+        out_features: NULL
+        s: 64.0
+        m: 0.35
+
+#criterion_args:
+#type: 'FocalLoss'
+#args:
+#    gamma: 2
+
+exp_args:
+    seed: 229
+    epoch: 40
+    device: 'cuda:0'
+    exp_path: './experiment'
+    exp_freq: 20
+    feature_path: './RFW_features'
+    num_nodes: 1
+    devices: 4

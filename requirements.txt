@@ -1,0 +1,15 @@
+numpy
+scipy==1.8.1
+imageio
+opencv-python-headless
+attrdict
+tensorboard
+--extra-index-url https://download.pytorch.org/whl/cu116
+torch
+--extra-index-url https://download.pytorch.org/whl/cu116
+torchvision
+--extra-index-url https://download.pytorch.org/whl/cu116
+torchaudio
+pytorch_lightning==1.6.4
+matplotlib
+scikit-learn
