@@ -43,6 +43,12 @@ TrainingData.zip
 .
 |---------/img/xxxxxxx.jpg
 ```
+For the format of **index.txt**, each line should be:
+```
+[A comment text (doesn't matter)][attribute index][label index (the idx of the identity)][Exist or not (you can just give "1" here)].
+```
+You can take a look at my example [index.txt](src/index.txt) for reference.
+
 
 ### Val-inst Data (RFW)
 The format of our val-inst zip file is as (on RFW dataset):
