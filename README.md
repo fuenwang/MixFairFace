@@ -47,7 +47,7 @@ For the format of **index.txt**, each line should be:
 ```
 [A comment text (doesn't matter)][attribute index][label index (the idx of the identity)][Exist or not (you can just give "1" here)].
 ```
-You can take a look at my example [index.txt]([src/index.txt](https://drive.google.com/file/d/1Pe7IZoyI2ii6xqXxSYiP2CFJKkEkKE9B/view?usp=share_link)) for reference.
+You can take a look at my example [index.txt](https://drive.google.com/file/d/1Pe7IZoyI2ii6xqXxSYiP2CFJKkEkKE9B/view?usp=share_link) for reference.
 
 
 ### Val-inst Data (RFW)
