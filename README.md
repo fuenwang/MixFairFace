@@ -43,7 +43,7 @@ TrainingData.zip
 .
 |---------/img/xxxxxxx.jpg
 ```
-For the format of **index.txt**, each line should be:
+**index.txt** is the labels of images, and each line should be corresponded to an image (in order). For example, the first line should be corresponded to **data/img/0000000.jpg**, and second line should be corresponded to **data/img/0000001.jpg**. The format of each line should be:
 ```
 [A comment text (doesn't matter)][attribute index][label index (the idx of the identity)][Exist or not (you can just give "1" here)].
 ```
@@ -100,3 +100,4 @@ For **val-inst**, it will use about 60 GB memory for calculating the cosine simi
 ## To-Do
 1. Release the pretrained model of balancedface and globalface.
 2. Reduce the memory usage of the proposed protocol.
+3. Rewrite dataloader to make easiler to use.
