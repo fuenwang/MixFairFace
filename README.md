@@ -5,7 +5,7 @@
 # MixFairFace
 The official implementation of our AAAI-23 paper "MixFairFace: Towards Ultimate Fairness via MixFair Adapter in Face Recognition" The final supplementary materials will be released soon!
 
-### [[Paper](https://arxiv.org/abs/2211.15181)]
+### [[Paper](https://arxiv.org/abs/2211.15181)] [[Supplementary Materials](https://fuenwang.ml/assets/AAAI2023_sup.pdf)]
 
 Our implementation is based on [Pytorch Lightning](https://www.pytorchlightning.ai/). The following features are included:
 1. Multiple GPUs Training (DDP)
